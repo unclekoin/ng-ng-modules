@@ -1,0 +1,11 @@
+<h1>{{ 'About page' | pageName }}</h1>
+
+<button (click)="read = true" class="btn btn-outline-primary mb-3">Mark as read</button>
+<div [ngStyle]="{ color: read ? 'blue' : null}" class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis deserunt facere in minima nisi nulla officia sed velit vero voluptatum.</div>
+
+<div class="btn-group mb-3">
+  <button [routerLink]="['/about', 'extra']" class="btn btn-outline-secondary">Show more...</button>
+  <button [routerLink]="['/about']" class="btn btn-outline-secondary">Hide more...</button>
+</div>
+
+<router-outlet></router-outlet>
